@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="af">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#071f3a">
+  <title>Kloof Waterspoor · Spoor 1</title>
+  <style>
+    :root{--navy:#071f3a;--blue:#0b3e6f;--cyan:#46d7e7;--foam:#eefcff;--gold:#ffc94a;--coral:#ff776d;--ink:#102b45;--muted:#587087;--card:#fff;--line:#c9e7ef;--ok:#146c5a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(160deg,#061a31 0,#0a4575 34%,#e7f8fb 34%,#f8fdff 100%);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.48}
+    main{width:min(100%,720px);margin:auto;padding:18px 14px 72px}.hero{color:white;padding:24px 8px 34px}.brand{font-size:.78rem;letter-spacing:.17em;text-transform:uppercase;color:#b9f7ff;font-weight:800}.hero h1{font-size:clamp(2rem,10vw,3.4rem);line-height:.98;margin:.55rem 0}.hero p{max-width:37rem;margin:.7rem 0;color:#e4faff}.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.badge{border:1px solid #72cbd9;background:#082a4dcc;padding:7px 10px;border-radius:999px;font-size:.82rem;font-weight:700}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;margin:0 0 14px;box-shadow:0 12px 28px #06305217}.eyebrow{color:#08788d;font-size:.76rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}.card h2{font-size:1.4rem;line-height:1.15;margin:.35rem 0 .7rem}.card h3{margin:.2rem 0 .3rem;font-size:1.05rem}.lead{font-size:1.05rem}.note{background:#e8f9fc;border-left:4px solid var(--cyan);padding:12px 14px;border-radius:8px;margin:14px 0}.warning{background:#fff5d7;border-left-color:var(--gold)}
+    .steps{counter-reset:step;display:grid;gap:10px;margin-top:14px}.step{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start}.step:before{counter-increment:step;content:counter(step);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--navy);color:white;font-weight:900}.step p{margin:3px 0}
+    .arms{display:grid;gap:12px;margin-top:14px}.arm{border:1px solid #bfdee7;border-radius:18px;padding:16px;background:linear-gradient(145deg,#fff,#f0fbfd)}.symbol-stage{min-height:94px;display:grid;place-items:center;margin:10px 0 8px}.clue{font-weight:750;color:#244862;margin:.25rem 0}.micro{font-size:.82rem;color:var(--muted);margin:.2rem 0}
+    .links{display:flex;justify-content:center;flex-wrap:nowrap;padding-left:12px}.link{width:29px;height:20px;border:5px solid #14748e;border-radius:50%;margin-left:-10px;transform:rotate(-15deg);background:#effcff}.link:nth-child(even){border-color:#0a355b;transform:rotate(15deg)}
+    .care{position:relative;width:150px;height:82px}.heart{position:absolute;inset:16px 44px auto;font-size:48px;filter:drop-shadow(0 4px 3px #ff776d44)}.hand{position:absolute;font-size:29px}.hand:nth-child(2){left:8px;top:4px;transform:rotate(28deg)}.hand:nth-child(3){right:8px;top:4px;transform:scaleX(-1) rotate(28deg)}.hand:nth-child(4){left:18px;bottom:0;transform:rotate(55deg)}.hand:nth-child(5){right:18px;bottom:0;transform:scaleX(-1) rotate(55deg)}
+    .medal{position:relative;width:120px;height:100px}.medal-core{position:absolute;left:35px;top:22px;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--gold);border:5px solid #d79b13;font-size:25px;font-weight:950;color:#6c4800}.ray{position:absolute;left:57px;top:2px;width:7px;height:22px;border-radius:8px;background:#f3a714;transform-origin:3px 48px}.ray:nth-child(2){transform:rotate(40deg)}.ray:nth-child(3){transform:rotate(80deg)}.ray:nth-child(4){transform:rotate(120deg)}.ray:nth-child(5){transform:rotate(160deg)}.ray:nth-child(6){transform:rotate(200deg)}.ray:nth-child(7){transform:rotate(240deg)}.ray:nth-child(8){transform:rotate(280deg)}.ray:nth-child(9){transform:rotate(320deg)}
+    .scale{font-size:64px;position:relative;width:176px;text-align:center;line-height:1}.weights{position:absolute;inset:42px 0 auto;display:flex;justify-content:space-between;padding:0 11px}.pan{display:flex;gap:3px}.weight{width:17px;height:16px;background:#126078;border-radius:3px 3px 5px 5px;border-top:4px solid #8eddea}
+    .compass{position:relative;width:110px;height:110px;border:4px solid #0e466d;border-radius:50%;background:radial-gradient(circle,#fff 0 36%,#dff7fb 37% 100%)}.compass:before{content:"N";position:absolute;top:2px;left:47px;font-weight:900;color:#0e466d}.needle{position:absolute;left:49px;top:24px;width:10px;height:62px;background:linear-gradient(var(--coral) 0 50%,#0e466d 50%);clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}.route-dot{position:absolute;width:14px;height:14px;border:3px solid white;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 2px #08788d}.route-dot.one{left:8px;bottom:20px}.route-dot.two{right:5px;top:40px}.route-dot.three{right:18px;bottom:12px}
+    .current{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0}.stream{padding:14px;border-radius:15px;background:#eaf9fc;border:1px dashed #4fbacc}.stream.unlock{background:#fff7e0;border-color:#eab63e}.arrow{color:#08788d;font-weight:900}.codebox{background:var(--navy);color:white;padding:16px;border-radius:16px;font:800 1.14rem/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.04em;overflow-wrap:anywhere}.cipher{color:#baf7ff}.slash{color:var(--gold);padding:0 .18em}
+    .alphabet{display:grid;grid-template-columns:repeat(6,1fr);gap:5px;margin:14px 0}.alpha{background:#e7f7fa;border-radius:8px;padding:7px 3px;text-align:center;font:750 .78rem/1.1 ui-monospace,monospace}.alpha b{display:block;color:#08788d;margin-top:3px}
+    label{display:block;font-weight:800;margin:12px 0 5px}input,textarea{width:100%;border:2px solid #b8dbe4;border-radius:12px;padding:12px 13px;font:inherit;color:var(--ink);background:#fbfeff}input:focus,textarea:focus{outline:3px solid #46d7e744;border-color:#08788d}textarea{min-height:84px;resize:vertical}.five{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.five input{text-align:center;font-weight:900;font-size:1.25rem;padding:11px 2px}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}button{border:0;border-radius:999px;padding:12px 16px;background:var(--navy);color:white;font:800 .9rem/1 inherit;cursor:pointer}button.secondary{background:#dff4f8;color:#0a4e65}.status{font-size:.86rem;color:var(--ok);font-weight:800;min-height:1.4em;margin-top:8px}
+    details{border-top:1px solid var(--line);padding:11px 0}summary{cursor:pointer;font-weight:850;color:#0b5570}.score{display:grid;grid-template-columns:1fr auto;gap:7px;padding:8px 0;border-bottom:1px solid #dcecef}.score:last-child{border:0}.score b{color:#08788d}.footer{text-align:center;color:#49697f;font-size:.84rem;padding:18px 12px}.noscript{background:#fff2c9;color:#5c4300;padding:10px;border-radius:10px}
+    @media(min-width:620px){main{padding-top:28px}.arms{grid-template-columns:1fr 1fr}.arm:last-child{grid-column:1/-1}.alphabet{grid-template-columns:repeat(13,1fr)}.current{grid-template-columns:1fr 1fr}}
+    @media(prefers-reduced-motion:no-preference){.card{animation:rise .45s ease both}.card:nth-child(3){animation-delay:.05s}.card:nth-child(4){animation-delay:.1s}@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}}
+  </style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="brand">Hoërskool Waterkloof · Personeel 2026</div>
+    <h1>Kloof<br>Waterspoor</h1>
+    <p><strong>Spoor 1:</strong> Vyf arms. Een stroom. ’n Spoor wat by iemand anders eindig.</p>
+    <div class="badges"><span class="badge">⏱ 15–20 minute</span><span class="badge">📅 3 werksdae</span><span class="badge">💧 100 punte</span></div>
+  </header>
+
+  <section class="card">
+    <div class="eyebrow">Jou sending</div>
+    <h2>Lees wat die water wegsteek</h2>
+    <p class="lead">Die stervis se vyf arms dra elk een syfer. Vind die syfers, plaas hulle in die enigste geldige volgorde en gebruik die stroom om die geheime opdrag te ontsyfer.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Tel presies.</strong> Elke arm sê watter deel van sy simbool tel.</p></div>
+      <div class="step"><p><strong>Orden strategies.</strong> Volg eers die natuurlike stroom en daarna die twee ontsluiters.</p></div>
+      <div class="step"><p><strong>Vind die skuif.</strong> Die eerste drie dra meer as die laaste twee.</p></div>
+      <div class="step"><p><strong>Lees terug.</strong> Gebruik A1Z26 en voltooi die opdrag voordat jy indien.</p></div>
+    </div>
+    <div class="note warning"><strong>Spelreël:</strong> Niks word geraai nie. Elke syfer, die volgorde en die verskuiwing moet uit die kaart bewys kan word.</div>
+  </section>
+
+  <section class="card" id="arms">
+    <div class="eyebrow">Die vyf stervisarms</div>
+    <h2>Elke simbool hou een waarde</h2>
+    <div class="arms">
+      <article class="arm">
+        <h3>Arm van skakels</h3>
+        <div class="symbol-stage links" aria-label="’n Reeks volledig geslote skakels"><i class="link"></i><i class="link"></i><i class="link"></i><i class="link"></i><i class="link"></i><i class="link"></i><i class="link"></i></div>
+        <p class="clue">Tel net die skakels wat volledig sluit.</p><p class="micro">Wat verbind, hou die geheel bymekaar.</p>
+      </article>
+      <article class="arm">
+        <h3>Arm van hande en hart</h3>
+        <div class="symbol-stage"><div class="care" aria-label="’n Hart wat deur hande gedra word"><span class="heart">♥</span><span class="hand">🖐</span><span class="hand">🖐</span><span class="hand">🖐</span><span class="hand">🖐</span></div></div>
+        <p class="clue">Tel die hande wat die hart dra.</p><p class="micro">Wat omgee, dra mense raak.</p>
+      </article>
+      <article class="arm">
+        <h3>Arm van die medalje</h3>
+        <div class="symbol-stage"><div class="medal" aria-label="’n Medalje met goue strale"><i class="ray"></i><i class="ray"></i><i class="ray"></i><i class="ray"></i><i class="ray"></i><i class="ray"></i><i class="ray"></i><i class="ray"></i><i class="ray"></i><div class="medal-core">★</div></div></div>
+        <p class="clue">Tel die goue strale, nie die ster nie.</p><p class="micro">Wat uitblink, lig die standaard.</p>
+      </article>
+      <article class="arm">
+        <h3>Arm van die weegskaal</h3>
+        <div class="symbol-stage"><div class="scale" aria-label="’n Weegskaal met gewigte op albei panne">⚖<div class="weights"><span class="pan"><i class="weight"></i><i class="weight"></i><i class="weight"></i></span><span class="pan"><i class="weight"></i><i class="weight"></i><i class="weight"></i></span></div></div></div>
+        <p class="clue">Tel al die gewigte op albei panne.</p><p class="micro">Wat verantwoord, weeg elke bydrae.</p>
+      </article>
+      <article class="arm">
+        <h3>Arm van die kompas</h3>
+        <div class="symbol-stage"><div class="compass" aria-label="’n Kompas met helder roetepunte"><i class="needle"></i><i class="route-dot one"></i><i class="route-dot two"></i><i class="route-dot three"></i></div></div>
+        <p class="clue">Tel die helder roetepunte, nie die rigtingsletter nie.</p><p class="micro">Wat duidelik is, gee koers.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">Die leesvolgorde</div>
+    <h2>Volg die twee strome</h2>
+    <p>Begin met die drie waardes wat van nature vloei. Gebruik daarna die twee waardes wat die vloei ontsluit.</p>
+    <div class="current">
+      <div class="stream"><strong>1 · Natuurlike stroom</strong><br>wat <em>verbind</em> <span class="arrow">→</span> wat <em>mense dra</em> <span class="arrow">→</span> wat <em>die standaard lig</em></div>
+      <div class="stream unlock"><strong>2 · Ontsluiters</strong><br>wat <em>elke bydrae weeg</em> <span class="arrow">→</span> wat <em>koers gee</em></div>
+    </div>
+    <label>Skryf die vyf syfers in leesvolgorde:</label>
+    <div class="five"><input inputmode="numeric" maxlength="1" aria-label="Syfer 1"><input inputmode="numeric" maxlength="1" aria-label="Syfer 2"><input inputmode="numeric" maxlength="1" aria-label="Syfer 3"><input inputmode="numeric" maxlength="1" aria-label="Syfer 4"><input inputmode="numeric" maxlength="1" aria-label="Syfer 5"></div>
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">Die versteekte verskuiwing</div>
+    <h2>Die eerste drie dra meer</h2>
+    <p>Tel die eerste drie syfers bymekaar. Tel die laaste twee bymekaar. Die <strong>oorwig</strong> van die eerste groep is die verskuiwing waarmee elke geheime getal vorentoe gedryf is.</p>
+    <div class="note">Om die oorspronklike letters terug te kry, <strong>trek die oorwig af</strong>. As jy onder 1 gaan, vloei die telling terug deur 26.</div>
+    <label for="shift">My berekende oorwig:</label><input id="shift" inputmode="numeric" placeholder="…">
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">A1Z26-kodetabel</div>
+    <h2>Letters het getalle</h2>
+    <div class="alphabet" aria-label="A1Z26 tabel">
+      <span class="alpha">A<b>1</b></span><span class="alpha">B<b>2</b></span><span class="alpha">C<b>3</b></span><span class="alpha">D<b>4</b></span><span class="alpha">E<b>5</b></span><span class="alpha">F<b>6</b></span><span class="alpha">G<b>7</b></span><span class="alpha">H<b>8</b></span><span class="alpha">I<b>9</b></span><span class="alpha">J<b>10</b></span><span class="alpha">K<b>11</b></span><span class="alpha">L<b>12</b></span><span class="alpha">M<b>13</b></span><span class="alpha">N<b>14</b></span><span class="alpha">O<b>15</b></span><span class="alpha">P<b>16</b></span><span class="alpha">Q<b>17</b></span><span class="alpha">R<b>18</b></span><span class="alpha">S<b>19</b></span><span class="alpha">T<b>20</b></span><span class="alpha">U<b>21</b></span><span class="alpha">V<b>22</b></span><span class="alpha">W<b>23</b></span><span class="alpha">X<b>24</b></span><span class="alpha">Y<b>25</b></span><span class="alpha">Z<b>26</b></span>
+    </div>
+    <p><strong>Geheime getalstroom</strong></p>
+    <div class="codebox"><span class="cipher">18 16 16</span><span class="slash"> / </span><span class="cipher">25</span><span class="slash"> / </span><span class="cipher">4 1 26 26 3</span><span class="slash"> / </span><span class="cipher">5 16 3 6 18</span></div>
+    <label for="decoded">My ontsyferde opdrag:</label><textarea id="decoded" autocomplete="off" placeholder="Skryf die presiese woorde hier …"></textarea>
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">Wanneer die opdrag duidelik word</div>
+    <h2>Laat ’n egte spoor</h2>
+    <p>’n Ware terugspoor het drie sigbare merke:</p>
+    <div class="note"><strong>WIE</strong> · <strong>WAT PRESIES IN 2026</strong> · <strong>WATTER WAARDE</strong></div>
+    <p>Voltooi die opdrag direk teenoor daardie kollega—persoonlik of met ’n persoonlike boodskap. ’n Algemene “dankie vir alles” laat nie ’n toetsbare spoor nie.</p>
+    <label for="colleague">Kollega se naam:</label><input id="colleague" autocomplete="off">
+    <label for="contribution">Spesifieke bydrae wat ek in 2026 raakgesien het:</label><textarea id="contribution"></textarea>
+    <label for="value">Waarde wat dié bydrae laat leef:</label><input id="value" autocomplete="off">
+    <label for="response">Hoe het ek dit oorgedra, en wat was die kollega se reaksie?</label><textarea id="response"></textarea>
+    <div class="actions"><button type="button" id="copy">Kopieer my indiening</button><button type="button" class="secondary" id="clear">Maak werkruimte skoon</button></div>
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+    <noscript><p class="noscript">JavaScript is af. Jy kan steeds die raaisel oplos en jou antwoorde handmatig na die amptelike vorm kopieer.</p></noscript>
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">Punte en hulp</div>
+    <h2>100 moontlike punte</h2>
+    <div class="score"><span>Logiese oplossing</span><b>70</b></div><div class="score"><span>Voltooide mikro-aksie</span><b>20</b></div><div class="score"><span>Kollegiale interaksie</span><b>10</b></div>
+    <p class="micro">Dien binne drie werksdae in. Die amptelike vorm se tydstempel bepaal betydsheid.</p>
+    <details><summary>Hulp 1 · Ek sukkel met die volgorde</summary><p>Lees die kursiefgedrukte werkwoorde onder “twee strome” en pas elkeen by net een armsimbool.</p></details>
+    <details><summary>Hulp 2 · Ek sukkel met die verskuiwing</summary><p>Bereken: (som van die eerste drie syfers) minus (som van die laaste twee syfers). Trek dié antwoord van elke geheime getal af.</p></details>
+    <details><summary>Hulp 3 · Ek verstaan die finale aksie nie</summary><p>Jou inskrywing moet ’n kollega by naam noem, een waarneembare bydrae uit 2026 beskryf en dit aan een van die vyf waardes koppel.</p></details>
+  </section>
+
+  <footer class="footer">Kloof Waterspoor · Ons waardes word sigbaar in die spore wat ons vir mekaar laat.</footer>
+</main>
+<script>
+  const ids=['shift','decoded','colleague','contribution','value','response'];
+  const digitInputs=[...document.querySelectorAll('.five input')];
+  const all=[...digitInputs,...ids.map(id=>document.getElementById(id))];
+  all.forEach((el,i)=>{const key='kws1-'+i;el.value=localStorage.getItem(key)||'';el.addEventListener('input',()=>localStorage.setItem(key,el.value));});
+  digitInputs.forEach((el,i)=>el.addEventListener('input',()=>{el.value=el.value.replace(/\D/g,'').slice(0,1);if(el.value&&digitInputs[i+1])digitInputs[i+1].focus()}));
+  document.getElementById('copy').addEventListener('click',async()=>{
+    const digits=digitInputs.map(x=>x.value).join('');
+    const out=`KLOOF WATERSPOOR · SPOOR 1\nVyfsyferkode: ${digits}\nVerskuiwing: ${shift.value}\nOntsyferde opdrag: ${decoded.value}\nKollega: ${colleague.value}\nSpesifieke bydrae in 2026: ${contribution.value}\nWaarde: ${value.value}\nOordrag en reaksie: ${response.value}`;
+    try{await navigator.clipboard.writeText(out);status.textContent='Jou indiening is gekopieer. Plak dit nou in die amptelike vorm.'}catch(e){status.textContent='Kopieer is geblokkeer. Kies en kopieer jou antwoorde handmatig.'}
+  });
+  document.getElementById('clear').addEventListener('click',()=>{if(!confirm('Maak al jou ingevulde antwoorde op hierdie toestel skoon?'))return;all.forEach((el,i)=>{el.value='';localStorage.removeItem('kws1-'+i)});status.textContent='Die plaaslike werkruimte is skoongemaak.'});
+</script>
+</body>
+</html>
